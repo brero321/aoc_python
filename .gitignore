@@ -1,0 +1,15 @@
+git# Virtual environment
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables file
+.env
+
+# Other common ignores
+dist/
+build/
+*.log
