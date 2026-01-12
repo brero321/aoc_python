@@ -70,9 +70,8 @@ for item in input_list:
     line = [ch for ch in item]
     input_items.append(line)
 
-positions = {70: 1}
+positions = {7: 1}
 max_col = len(input_list[0])
-counter = 1
 for i in range(1, len(input_list)-1):
     next_positions = {}
     for p, v in positions.items():
@@ -83,8 +82,7 @@ for i in range(1, len(input_list)-1):
                 next_positions[p - 1] = next_positions.get(p - 1, 0) + v
             if p + 1 < max_col:
                 next_positions[p + 1] = next_positions.get(p + 1, 0) + v
-            counter = 0
-            for k, v in next_positions.items():
-                counter = counter + v
     positions = next_positions
-    print(next_positions, "counter:", counter)
+    print(next_positions)
+
+sum(positions.values())
